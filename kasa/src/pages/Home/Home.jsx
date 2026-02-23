@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./Home.module.css";
+import imgbackground from "../../assets/imgbackground.png";
 import { Banner } from "../../components/Banner/Banner";
+import { Link } from "react-router-dom";
 
 
 
@@ -31,18 +33,18 @@ function Home() {
     return (
         <div className={styles.home}>
 
-            {error && <p>Une erreur est survenue : {error}</p>}
-
-            <Banner text="Chez vous, partout et ailleurs." />
-
+            <Banner image={imgbackground} alt="Photo de falaises" text="Chez vous, partout et ailleurs" />
 
             <div className={styles.container}>
                 <div className={styles.cards}>
                     {logements.map((property) => (
-                        <div key={property.id} className={styles.card}>
+                        <Link
+                            key={property.id}
+                            to={`/logement/${property.id}`}
+                            className={styles.card} >
                             <img src={property.cover} alt={property.title} />
                             <h2>{property.title}</h2>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

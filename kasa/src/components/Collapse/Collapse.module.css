@@ -1,0 +1,57 @@
+.collapse {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.button {
+    background-color: #FF6060;
+    width: 80%;
+    padding: 10px 20px 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titlebutton {
+    font-size: 24px;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+
+.vector {
+    height: 13.71px;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}
+
+.open.vector {
+
+    transform: rotate(-180deg);
+}
+
+.content {
+    color: black;
+    background-color: #F6F6F673;
+    width: 83%;
+    border-radius: 10px 5px;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+
+.collapse p {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
