@@ -1,6 +1,7 @@
 import styles from "../../components/Banner/Banner.module.css";
 
 export function Banner(props) {
+
     return (
         <div className={styles.imgWrapper} style={{ backgroundImage: `url(${props.image})` }}
             aria-label={props.alt}>
