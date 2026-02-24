@@ -1,0 +1,30 @@
+.error {
+    color: #FF6060;
+}
+
+.error h1 {
+    font-size: 288px;
+    font-family: "Montserrat";
+    margin-top: 89px;
+}
+
+.error h2 {
+    font-size: 36px;
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+
+.linkReturn {
+    color: black;
+    font-size: 18px;
+    font-family: "Montserrat";
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 1px;
+    text-decoration-skip-ink: none;
+}
+
+.linkReturn:hover {
+    color: black;
+}

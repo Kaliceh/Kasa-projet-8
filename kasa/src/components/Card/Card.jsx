@@ -1,5 +1,5 @@
 import styles from "../Card/Card.module.css";
-import { Link } from "react-router-dom";;
+import { Link } from "react-router-dom";
 
 export function Card(props) {
 
