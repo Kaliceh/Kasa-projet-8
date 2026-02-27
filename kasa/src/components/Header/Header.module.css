@@ -1,10 +1,10 @@
 .header {
     background-color: #ffffff;
     padding-top: 45px;
+    margin-bottom: 50px;
 }
 
 .inner {
-    padding: 0 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,15 +22,15 @@
 .link {
     color: black;
     font-size: 24px;
-    font-family: 'Montserrat';
     position: relative;
+    text-decoration: none;
 }
 
 .link:hover {
     color: black;
 }
 
-.link.active::after {
+.active::after {
     content: "";
     position: absolute;
     left: 0;

@@ -1,8 +1,10 @@
 footer {
-    margin-top: 66px;
-    margin-bottom: 29px;
+    padding-top: 66px;
+    padding-bottom: 29px;
     background-color: black;
+    width: 100%;
 }
+
 
 .logoFooter {
     margin-bottom: 28.56px;

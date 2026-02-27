@@ -1,13 +1,13 @@
 .card {
     position: relative;
-    width: 340px;
-    height: 340px;
+    flex: 0 0 calc((100% - 120px) / 3);
+    aspect-ratio: 1 / 1;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-
+    text-decoration: none;
 }
 
 .imgWrapper {
