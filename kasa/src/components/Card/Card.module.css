@@ -28,3 +28,23 @@
     margin-left: 20px;
     margin-bottom: 20px;
 }
+
+
+
+@media (max-width: 425px) {
+    .card {
+        flex: 1 1 calc(100% - 30px);
+        height: 255px;
+    }
+
+    .titleCard {
+        padding-left: 19.71px;
+        padding-bottom: 15px;
+        margin: 0;
+    }
+
+    .imgWrapper {
+        border-radius: 10px;
+        height: 100%;
+    }
+}

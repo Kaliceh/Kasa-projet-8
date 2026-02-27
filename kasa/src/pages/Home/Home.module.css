@@ -12,3 +12,18 @@
     border-radius: 25px;
     margin-bottom: 50px;
 }
+
+@media (max-width: 425px) {
+    .cards {
+        gap: 20px;
+        padding: 0 15px;
+        background-color: transparent;
+        margin-bottom: 27px;
+    }
+
+    .cards>* {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}

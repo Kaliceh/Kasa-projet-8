@@ -39,3 +39,33 @@
     height: 1.55px;
     background-color: black;
 }
+
+@media (max-width: 425px) {
+    .inner {
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 50%;
+        height: 50%;
+    }
+
+    .nav {
+        gap: 26px;
+        white-space: nowrap;
+    }
+
+    .link {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .active::after {
+        bottom: 2px;
+        height: 1px;
+    }
+}

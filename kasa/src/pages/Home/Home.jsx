@@ -7,6 +7,7 @@ import { Card } from "../../components/Card/Card"
 
 
 
+
 function Home() {
     const [logements, setLogements] = useState([]);
     const [error, setError] = useState(null);
@@ -34,7 +35,11 @@ function Home() {
     return (
         <div className={styles.home}>
 
-            <Banner image={imgbackground} alt="Photo de falaises" text="Chez vous, partout et ailleurs" />
+            <Banner
+                image={imgbackground}
+                alt="Photo de falaises"
+                text={"Chez vous,\npartout et ailleurs"}
+            />
 
             <div className={styles.cards}>
                 {logements.map((property) => (
