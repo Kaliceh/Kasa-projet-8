@@ -3,6 +3,7 @@ footer {
     padding-bottom: 29px;
     background-color: black;
     width: 100%;
+    margin-top: 38px;
 }
 
 
@@ -13,5 +14,4 @@ footer {
 p {
     margin: 0;
     font-size: 24px;
-    font-family: "Montserrat";
 }

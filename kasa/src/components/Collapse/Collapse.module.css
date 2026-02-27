@@ -1,7 +1,9 @@
 .collapse {
     display: flex;
     justify-content: center;
-    margin-top: 28px;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 28px;
 }
 
 .buttonWrapper {
@@ -21,6 +23,16 @@
     justify-content: space-between;
 }
 
+.content {
+    color: black;
+    background-color: #F6F6F673;
+    width: 83%;
+    border-radius: 10px 5px;
+    font-size: 18px;
+    overflow: hidden;
+    margin-top: 0;
+}
+
 .titlebutton {
     font-size: 24px;
     font-family: "Montserrat";
@@ -38,14 +50,7 @@
     transform: rotate(-180deg);
 }
 
-.content {
-    color: black;
-    background-color: #F6F6F673;
-    width: 83%;
-    border-radius: 10px 5px;
-    font-size: 18px;
-    overflow: hidden;
-}
+
 
 
 .collapse p {

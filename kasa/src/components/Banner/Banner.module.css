@@ -6,9 +6,9 @@
     border-radius: 25px;
     overflow: hidden;
     box-shadow: 0px 4px 4px 0px #00000040;
-    margin-bottom: 43px;
     background-size: cover;
     background-position: center;
+    margin-bottom: 43px;
 }
 
 .imgWrapper::after {
@@ -35,7 +35,6 @@
         1px -1px 0 black,
         -1px 1px 0 black,
         1px 1px 0 black;
-    font-family: "Montserrat";
     font-weight: bold;
     text-align: center;
     line-height: 1;
