@@ -1,0 +1,33 @@
+footer {
+    padding-top: 66px;
+    padding-bottom: 29px;
+    background-color: black;
+    width: 100%;
+    margin-top: 38px;
+}
+
+
+.logoFooter {
+    margin-bottom: 28.56px;
+}
+
+p {
+    margin: 0;
+    font-size: 24px;
+}
+
+@media (max-width: 425px) {
+    footer {
+        margin: 0;
+        padding-bottom: 62px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+
+    .breakLine {
+        display: block;
+    }
+}
