@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import styles from "../Logement/Logement.module.css";
+import { Carousel } from "../../components/Carousel/Carousel";
 
 function Logement() {
     const { id } = useParams();
     const [logement, setLogement] = useState(null);
     const [error, setError] = useState(null);
-    const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         const fetchLogement = async () => {
@@ -29,52 +29,13 @@ function Logement() {
         fetchLogement();
     }, [id]);
 
-    const nextSlide = () => {
-        if (!logement?.pictures) return;
-        setCurrentIndex((prev) =>
-            prev === logement.pictures.length - 1 ? 0 : prev + 1
-        );
-    };
-
-    const prevSlide = () => {
-        if (!logement?.pictures) return;
-        setCurrentIndex((prev) =>
-            prev === 0 ? logement.pictures.length - 1 : prev - 1
-        );
-    };
-
     if (error) return <p>Une erreur est survenue : {error}</p>;
     if (!logement) return <p>Chargement…</p>;
-
-    const hasMultiplePictures = logement.pictures.length > 1;
 
     return (
         <div className={styles.logementContainer}>
 
-            <div className={styles.logementGallery}>
-                <img
-                    src={logement.pictures[currentIndex]}
-                    alt={`${logement.title} ${currentIndex + 1}`}
-                    className={styles.carouselImage}
-                />
-
-                {hasMultiplePictures && (
-                    <>
-                        {/* Flèches minimalistes */}
-                        <button className={styles.arrowLeft} onClick={prevSlide}>
-                            ❮
-                        </button>
-                        <button className={styles.arrowRight} onClick={nextSlide}>
-                            ❯
-                        </button>
-
-                        {/* Indicateur fractionnel */}
-                        <div className={styles.slideCounter}>
-                            {currentIndex + 1}/{logement.pictures.length}
-                        </div>
-                    </>
-                )}
-            </div>
+        <Carousel pictures={logement.pictures} />
 
             <h1 className={styles.logementTitle}>{logement.title}</h1>
 

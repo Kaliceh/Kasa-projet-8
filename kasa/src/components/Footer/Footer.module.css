@@ -18,8 +18,7 @@ p {
 
 @media (max-width: 425px) {
     footer {
-        margin: 0;
-        padding-bottom: 62px;
+        padding-bottom: 58px;
     }
 
     p {
