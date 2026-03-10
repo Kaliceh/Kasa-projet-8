@@ -60,3 +60,9 @@
     margin-bottom: 20px;
     text-align: left;
 }
+
+@media (max-width: 375px) {
+.collapse {
+    margin-bottom: 20px;
+}
+}

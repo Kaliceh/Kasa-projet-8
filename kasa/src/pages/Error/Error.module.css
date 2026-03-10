@@ -1,17 +1,20 @@
 .error {
     color: #FF6060;
+    padding-bottom: 139px;
 }
 
 .error h1 {
     font-size: 288px;
     font-family: "Montserrat";
     margin-top: 89px;
+    margin-bottom: 89px;
 }
 
 .error h2 {
     font-size: 36px;
     font-family: "Montserrat";
     font-weight: 500;
+    margin-bottom: 139px;
 }
 
 .linkReturn {

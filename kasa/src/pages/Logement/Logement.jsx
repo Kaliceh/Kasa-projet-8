@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import styles from "../Logement/Logement.module.css";
-import { Carousel } from "../../components/Carousel/Carousel";
+import { Slideshow } from "../../components/Slideshow/Slideshow";
+import Error from "../Error/Error"
+
 
 function Logement() {
     const { id } = useParams();
@@ -14,7 +16,9 @@ function Logement() {
                 const response = await fetch("http://localhost:8080/api/properties");
                 if (!response.ok) throw new Error("Erreur lors de la récupération du logement");
 
+
                 const data = await response.json();
+
                 const logementFind = data.find((logement) => logement.id === id);
 
                 if (!logementFind) throw new Error("Logement non trouvé");
@@ -29,13 +33,19 @@ function Logement() {
         fetchLogement();
     }, [id]);
 
-    if (error) return <p>Une erreur est survenue : {error}</p>;
+    if (error) return <Error />
     if (!logement) return <p>Chargement…</p>;
 
     return (
         <div className={styles.logementContainer}>
 
-        <Carousel pictures={logement.pictures} />
+        <Slideshow pictures={logement.pictures} />
+
+            <div className={styles.logementGallery}>
+                {logement.pictures.map((pic, index) => (
+                    <img key={index} src={pic} alt={`${logement.title} ${index + 1}`} />
+                ))}
+            </div>
 
             <h1 className={styles.logementTitle}>{logement.title}</h1>
 
@@ -52,7 +62,10 @@ function Logement() {
                 ))}
             </div>
 
+
             <p className={styles.logementRating}>Rating : {logement.rating}</p>
+
+            <p className={styles.logementRating}>Rating : {logement.rating} </p>
 
             <p className={styles.logementDescription}>{logement.description}</p>
 

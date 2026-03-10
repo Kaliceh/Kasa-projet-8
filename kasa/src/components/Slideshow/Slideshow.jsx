@@ -1,7 +1,7 @@
 import { useState } from "react";
-import styles from "../Carousel/Carousel.module.css";
+import styles from "./Slideshow.module.css"
 
-export function Carousel(props) {
+export function Slideshow(props) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 

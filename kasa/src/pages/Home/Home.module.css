@@ -8,12 +8,13 @@
     gap: 60px;
     justify-content: center;
     background-color: #F6F6F6;
-    padding: 50px;
+    padding: 56px 50px 43px 50px;
     border-radius: 25px;
     margin-bottom: 50px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 375px) {
+
     .cards {
         gap: 20px;
         padding: 0 15px;

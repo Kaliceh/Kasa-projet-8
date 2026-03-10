@@ -15,7 +15,6 @@ let router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "about", element: <About /> },
       { path: "logement/:id", element: <Logement /> },
-      { path: "error", element: <Error /> },
     ],
   },
 ]);
