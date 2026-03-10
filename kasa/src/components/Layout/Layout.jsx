@@ -8,7 +8,7 @@ function Layout() {
     <div className={styles.wrapper}>
       <Header />
       <main className={styles.container}>
-        <Outlet /> {/* React Router injectera Home, About, Logement, ou Error */}
+        <Outlet />
       </main>
       <Footer />
     </div>

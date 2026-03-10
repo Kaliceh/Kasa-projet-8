@@ -1,0 +1,204 @@
+.propertyContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titleHostContainer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.logementTitle {
+    position: relative;
+    font-size: 36px;
+    color: #FF6060;
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.logementHost {
+    position: absolute;
+    color: #FF6060;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+    right: 230px;
+    margin-top: 30px;
+}
+
+.hostName {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.hostName p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.logementHost img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logementLocation {
+    font-weight: 500;
+    color: black;
+    font-size: 18px;
+    margin-top: -35px;
+    display: flex;
+}
+
+.logementTags {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tag {
+    background-color: #FF6060;
+    color: white;
+    padding: 3px 40px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.logementRating {
+    display: flex;
+    gap: 15.25px;
+}
+
+/* étoiles pleines */
+.starActive {
+    width: 24px;
+    height: 24px;
+}
+
+/* étoiles vides */
+.starInactive {
+    width: 24px;
+    height: 24px;
+    filter: grayscale(100%);
+    opacity: 0.4;
+}
+
+.tagsRatingContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapseContainer {
+    display: flex;
+    justify-content: space-between;
+    /* premier bouton à gauche, deuxième à droite */
+    gap: 76px;
+    margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+
+    .propertyContainer *,
+    .propertyContainer *::before,
+    .propertyContainer *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+
+    .propertyContainer {
+        padding: 0 20px;
+        gap: 0;
+
+        margin-bottom: 27px;
+    }
+
+    /* Titre */
+    .logementTitle {
+        font-size: 18px;
+        margin-top: 15px;
+        display: flex;
+        align-items: start;
+    }
+
+    /* Localisation */
+    .logementLocation {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .tagsRatingContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .logementTags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .tag {
+        padding: 3px 20px;
+        font-size: 10px;
+    }
+
+    .logementRating {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        margin-top: 24px;
+        margin-bottom: 20px;
+    }
+
+    .starActive,
+    .starInactive {
+        width: 13px;
+        height: 13px;
+    }
+
+    .logementHost {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        justify-content: flex-end;
+        margin-left: auto;
+        margin-bottom: 16px;
+        right: 20px;
+        bottom: 120px;
+    }
+
+    .hostName {
+        text-align: right;
+    }
+
+    .hostName p {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .logementHost img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+}

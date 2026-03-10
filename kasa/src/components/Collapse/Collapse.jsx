@@ -6,7 +6,7 @@ function Collapse(props) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className={styles.collapse}>
+        <div className={`${styles.collapse} ${props.customClass || ""}`}>
             <div className={styles.buttonWrapper}>
                 <div className={styles.button}>
                     <span className={styles.titlebutton}>{props.title}</span>
@@ -20,7 +20,9 @@ function Collapse(props) {
 
                 {isOpen && (
                     <div className={styles.content}>
-                        <p>{props.content}</p>
+                        <div className={styles.contentText}>
+                            {props.content}
+                        </div>
                     </div>
                 )
                 }

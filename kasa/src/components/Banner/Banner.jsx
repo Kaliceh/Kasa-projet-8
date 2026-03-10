@@ -1,6 +1,6 @@
 import styles from "../../components/Banner/Banner.module.css";
 
-export function Banner(props) {
+function Banner(props) {
 
     const text = props.text;
 
@@ -20,5 +20,6 @@ export function Banner(props) {
     )
 }
 
+export default Banner;
 
 

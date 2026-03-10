@@ -1,5 +1,7 @@
 import { useState } from "react";
-import styles from "./Slideshow.module.css"
+import styles from "./Slideshow.module.css";
+import ArrowLeft from "../../assets/ArrowLeft.png";
+import ArrowRight from "../../assets/ArrowRight.png";
 
 export function Slideshow(props) {
 
@@ -19,34 +21,38 @@ export function Slideshow(props) {
         );
     };
 
-        const hasMultiplePictures = props.pictures.length > 1;
+    const hasMultiplePictures = props.pictures.length > 1;
 
     return (
 
+        <div className={styles.carouselContainer}>
+            <img
+                src={props.pictures[currentIndex]}
+                alt={`image ${currentIndex + 1}`}
+                className={styles.carouselImage}
+            />
 
-         <div className={styles.logementGallery}>
-                        <img
-                            src={props.pictures[currentIndex]}
-                            alt={`image ${currentIndex + 1}`}
-                            className={styles.carouselImage}
-                        />
-        
-                        {hasMultiplePictures && (
-                            <>
-                                {/* Flèches minimalistes */}
-                                <button className={styles.arrowLeft} onClick={prevSlide}>
-                                    ❮
-                                </button>
-                                <button className={styles.arrowRight} onClick={nextSlide}>
-                                    ❯
-                                </button>
-        
-                                {/* Indicateur fractionnel */}
-                                <div className={styles.slideCounter}>
-                                    {currentIndex + 1}/{props.pictures.length}
-                                </div>
-                            </>
-                        )}
+            {hasMultiplePictures && (
+                <>
+                    <img
+                        src={ArrowLeft}
+                        alt="Précédent"
+                        className={styles.arrowLeft}
+                        onClick={prevSlide}
+                    />
+
+                    <img
+                        src={ArrowRight}
+                        alt="Suivant"
+                        className={styles.arrowRight}
+                        onClick={nextSlide}
+                    />
+
+                    <div className={styles.slideCounter}>
+                        {currentIndex + 1}/{props.pictures.length}
                     </div>
+                </>
+            )}
+        </div>
     )
 }

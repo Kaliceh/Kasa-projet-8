@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./Home.module.css";
 import imgbackground from "../../assets/imgbackground.png";
-import { Banner } from "../../components/Banner/Banner";
+import Banner from "../../components/Banner/Banner/";
 import { Card } from "../../components/Card/Card"
-
-
-
 
 
 function Home() {

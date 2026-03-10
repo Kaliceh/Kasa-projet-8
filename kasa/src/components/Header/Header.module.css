@@ -40,14 +40,14 @@
     background-color: black;
 }
 
-@media (max-width: 375px) {
-.header {
-    padding-top: 20px;
-    margin-bottom: 27px;
-}
+@media (max-width: 480px) {
+    .header {
+        padding-top: 20px;
+        margin-bottom: 27px;
+    }
 
     .inner {
-        padding: 0 15px;
+        padding: 0 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
