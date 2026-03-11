@@ -1,0 +1,220 @@
+.propertyContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 24px;
+}
+
+.titleLocationContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.titleHostContainer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.logementTitle {
+    position: relative;
+    font-size: 36px;
+    color: #FF6060;
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+}
+
+.ratingHostContainer .hostMobile {
+    display: none;
+}
+
+.headerContainer .hostDesktop {
+    display: flex;
+}
+
+.logementHost {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FF6060;
+}
+
+.hostName {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.hostName p {
+    margin: 0;
+}
+
+
+.hostPicture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logementLocation {
+    font-weight: 500;
+    color: black;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+}
+
+.logementTags {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tag {
+    background-color: #FF6060;
+    color: white;
+    padding: 3px 40px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.logementRating {
+    display: flex;
+    gap: 15.25px;
+}
+
+.starActive {
+    width: 24px;
+    height: 24px;
+}
+
+.starInactive {
+    width: 24px;
+    height: 24px;
+    filter: grayscale(100%);
+    opacity: 0.4;
+}
+
+.tagsRatingContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapseContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 76px;
+    margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+
+    .propertyContainer *,
+    .propertyContainer *::before,
+    .propertyContainer *::after {
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+
+
+    .propertyContainer {
+        padding: 0 20px;
+        margin-bottom: 27px;
+    }
+
+    .headerContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logementTitle {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .logementLocation {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .tagsRatingContainer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logementTags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    .tag {
+        padding: 3px 20px;
+        font-size: 10px;
+    }
+
+    .logementRating {
+        display: flex;
+        gap: 6px;
+        order: 2;
+    }
+
+    .starActive,
+    .starInactive {
+        width: 13px;
+        height: 13px;
+    }
+
+    .headerContainer .hostDesktop {
+        display: none;
+    }
+
+    .ratingHostContainer .hostMobile {
+        display: flex;
+        align-items: center;
+    }
+
+    .ratingHostContainer {
+        margin-top: 24px;
+        margin-bottom: 20px;
+    }
+
+    .logementHost {
+        order: 3;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+
+        margin-top: -24px
+    }
+
+    .hostName {
+        text-align: right;
+    }
+
+    .hostName p {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .hostPicture {
+        width: 32px;
+        height: 32px;
+    }
+
+}

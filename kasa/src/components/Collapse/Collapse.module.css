@@ -1,0 +1,131 @@
+.collapse {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.button {
+    background-color: #FF6060;
+    width: 80%;
+    padding: 10px 20px 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.content {
+    background-color: #f6f6f673;
+    border-radius: 0 0 5px 5px;
+    width: 83%;
+    padding: 16px 20px 20px;
+    box-sizing: border-box;
+    text-align: start;
+}
+
+.contentText {
+    color: black;
+    width: 100%;
+    font-size: 18px;
+}
+
+.propertyCollapseContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 76px;
+    margin-top: 24px;
+}
+
+.propertyCollapse .button {
+    border-radius: 10px;
+    width: 95%;
+}
+
+.propertyCollapse .content {
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    text-align: start;
+}
+
+
+.propertyCollapse .buttonWrapper {
+    align-items: stretch;
+}
+
+.propertyCollapse:last-child .button {
+    margin-left: auto;
+}
+
+.titlebutton {
+    font-size: 24px;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+
+.vector {
+    height: 13.71px;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}
+
+.open.vector {
+
+    transform: rotate(-180deg);
+}
+
+.collapse p {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+@media (max-width: 480px) {
+    .collapse {
+        margin-bottom: 20px;
+    }
+
+    .propertyCollapseContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .propertyCollapse .button {
+        width: 100%;
+        padding: 10px
+    }
+
+    .propertyCollapse .content {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .content {
+        font-size: 12px;
+        width: 92%;
+    }
+
+    .contentText {
+        font-size: 12px;
+    }
+
+    .titlebutton {
+        font-size: 13px;
+    }
+
+    .button {
+        width: 85%;
+    }
+}
