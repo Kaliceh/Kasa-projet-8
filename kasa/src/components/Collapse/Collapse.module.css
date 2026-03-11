@@ -21,22 +21,29 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .content {
-    color: black;
-    background-color: #F6F6F673;
+    background-color: #f6f6f673;
+    border-radius: 0 0 5px 5px;
     width: 83%;
-    border-radius: 10px 5px;
+    padding: 16px 20px 20px;
+    box-sizing: border-box;
+    text-align: start;
+}
+
+.contentText {
+    color: black;
+    width: 100%;
     font-size: 18px;
-    overflow: hidden;
-    margin-top: 0;
 }
 
 .propertyCollapseContainer {
     display: flex;
     justify-content: space-between;
     gap: 76px;
+    margin-top: 24px;
 }
 
 .propertyCollapse .button {
@@ -51,10 +58,6 @@
     text-align: start;
 }
 
-.propertyCollapse .contentText {
-    padding-left: 20px;
-    padding-bottom: 20px;
-}
 
 .propertyCollapse .buttonWrapper {
     align-items: stretch;
@@ -80,9 +83,6 @@
 
     transform: rotate(-180deg);
 }
-
-
-
 
 .collapse p {
     font-size: 18px;
@@ -110,7 +110,19 @@
     .propertyCollapse .content {
         width: 100%;
         font-size: 12px;
-        padding: 13px 0px 20px 20px;
         /* garder le fond gris bien aligné */
+    }
+
+    .content {
+        font-size: 12px;
+        width: 92%;
+    }
+
+    .titlebutton {
+        font-size: 13px;
+    }
+
+    .button {
+        width: 85%;
     }
 }

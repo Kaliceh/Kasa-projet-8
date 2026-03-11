@@ -35,24 +35,20 @@
 @media (max-width: 480px) {
     .error h1 {
         font-size: 96px;
-        /* réduit pour mobile */
         margin-top: 113px;
         margin-bottom: 113px;
     }
 
     .error h2 {
         font-size: 18px;
-        /* réduit pour mobile */
         margin-bottom: 113px;
     }
 
     .linkReturn {
         font-size: 14px;
-        /* ajuste si besoin */
     }
 
     .error {
         padding-bottom: 113px;
-        /* moins d’espace sur mobile */
     }
 }

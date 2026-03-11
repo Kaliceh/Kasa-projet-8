@@ -5,29 +5,37 @@ footer {
     width: 100%;
 }
 
+.inner {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
 .logoFooter {
     margin-bottom: 28.56px;
 }
 
-p {
+footer p {
     margin: 0;
     font-size: 24px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
     footer {
         margin: 0;
         padding-bottom: 58px;
     }
 
-    p {
+    footer p {
         font-size: 12px;
     }
 
 
     .breakLine {
         display: block;
+    }
+
+    .logoFooter {
+        margin-bottom: 0px;
     }
 
 

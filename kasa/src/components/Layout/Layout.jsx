@@ -5,13 +5,15 @@ import styles from "./Layout.module.css";
 
 function Layout() {
   return (
-    <div className={styles.wrapper}>
-      <Header />
-      <main className={styles.container}>
-        <Outlet />
-      </main>
+    <>
+      <div className={styles.wrapper}>
+        <Header />
+        <main className={styles.container}>
+          <Outlet />
+        </main>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
