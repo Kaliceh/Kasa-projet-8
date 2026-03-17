@@ -7,6 +7,7 @@ import { Card } from "../../components/Card/Card"
 
 function Home() {
     const [logements, setLogements] = useState([]);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchLogements = async () => {

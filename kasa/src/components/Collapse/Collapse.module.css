@@ -27,7 +27,7 @@
 .content {
     background-color: #f6f6f673;
     border-radius: 0 0 5px 5px;
-    width: 83%;
+    width: 82%;
     padding: 16px 20px 20px;
     box-sizing: border-box;
     text-align: start;
@@ -35,8 +35,29 @@
 
 .contentText {
     color: black;
-    width: 100%;
     font-size: 18px;
+}
+
+.contentWrapper {
+    overflow: hidden;
+    width: 100%;
+
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        transform 0.4s ease;
+}
+
+/* 🔥 état ouvert */
+.contentWrapper.open {
+    max-height: 500px;
+    /* assez grand pour contenir le texte */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .propertyCollapseContainer {
@@ -57,7 +78,6 @@
     display: flex;
     text-align: start;
 }
-
 
 .propertyCollapse .buttonWrapper {
     align-items: stretch;

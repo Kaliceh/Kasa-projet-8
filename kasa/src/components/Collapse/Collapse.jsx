@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "../Collapse/Collapse.module.css";
 import vector from "../../assets/vector.png";
 
-function Collapse({ title, content, customClass }) {
+function Collapse({ title, content, customClass, contentClass }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -17,11 +17,11 @@ function Collapse({ title, content, customClass }) {
                     />
                 </div>
 
-                {isOpen && (
-                    <div className={styles.content}>
+                <div className={`${styles.contentWrapper} ${isOpen ? styles.open : ""}`}>
+                    <div className={`${styles.content} ${contentClass || ""}`}>
                         <div className={styles.contentText}>{content}</div>
                     </div>
-                )}
+                </div>
             </div>
         </div>
     );

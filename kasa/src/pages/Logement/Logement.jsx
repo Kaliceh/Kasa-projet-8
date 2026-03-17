@@ -22,10 +22,12 @@ function Logement() {
 
                 if (!logementFind) {
                     setNotFound(true);
+                    setNotFound(true);
                 } else {
                     setLogement(logementFind);
                 }
             } catch {
+                setNotFound(true);
                 setNotFound(true);
             } finally {
                 setLoading(false);
@@ -36,6 +38,7 @@ function Logement() {
     }, [id]);
 
     if (loading) return <p>Chargement…</p>;
+    if (notFound) return <Error />;
     if (notFound) return <Error />;
 
     return (

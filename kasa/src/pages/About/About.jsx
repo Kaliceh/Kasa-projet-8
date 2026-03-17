@@ -15,6 +15,7 @@ function About() {
                         key={index}
                         title={item.title}
                         content={item.content}
+                        contentClass={styles.aboutContent}
                     />
                 ))}
             </div>
