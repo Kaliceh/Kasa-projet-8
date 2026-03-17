@@ -8,12 +8,17 @@ function Collapse({ title, content, customClass, contentClass }) {
     return (
         <div className={`${styles.collapse} ${customClass || ""}`}>
             <div className={styles.buttonWrapper}>
-                <div className={styles.button} onClick={() => setIsOpen(!isOpen)}>
+                <div
+                    className={styles.button}
+                    onClick={() => setIsOpen(!isOpen)}
+                    data-testid="collapse-toggle"
+                >
                     <span className={styles.titlebutton}>{title}</span>
                     <img
                         src={vector}
                         alt="Chevron"
                         className={`${styles.vector} ${isOpen ? styles.open : ""}`}
+                        data-testid="collapse-chevron"
                     />
                 </div>
 

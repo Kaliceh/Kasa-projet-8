@@ -5,7 +5,8 @@ function Banner({ image, alt, text, customClass }) {
         <div
             className={`${styles.imgWrapper} ${customClass || ""}`}
             style={{ backgroundImage: `url(${image})` }}
-            aria-label={alt} // utile pour l'accessibilité
+            aria-label={alt}
+            data-testid="banner-img"
         >
             {text && <h1 className={styles.title}>{text}</h1>}
         </div>
