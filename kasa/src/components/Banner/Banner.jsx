@@ -1,25 +1,15 @@
-import styles from "../../components/Banner/Banner.module.css";
+import styles from "./Banner.module.css";
 
-function Banner(props) {
-
-    const text = props.text;
-
-    const formattedText = text
-        ? text.split("\n").map((line, idx) => (
-            <span key={idx} className={styles.mobileBreak}>
-                {line}
-            </span>
-        ))
-        : null;
-
+function Banner({ image, alt, text, customClass }) {
     return (
-        <div className={styles.imgWrapper} style={{ backgroundImage: `url(${props.image})` }}
-            aria-label={props.alt}>
-            {props.text && <h1 className={styles.title}>{formattedText}</h1>}
+        <div
+            className={`${styles.imgWrapper} ${customClass || ""}`}
+            style={{ backgroundImage: `url(${image})` }}
+            aria-label={alt} // utile pour l'accessibilité
+        >
+            {text && <h1 className={styles.title}>{text}</h1>}
         </div>
-    )
+    );
 }
 
 export default Banner;
-
-

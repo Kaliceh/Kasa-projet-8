@@ -19,6 +19,8 @@ footer p {
     font-size: 24px;
 }
 
+
+
 @media (max-width: 480px) {
     footer {
         margin: 0;

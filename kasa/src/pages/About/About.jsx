@@ -6,8 +6,8 @@ import { aboutList } from "../../data/aboutList";
 
 function About() {
     return (
-        <div className={styles.about}>
-            <Banner image={imgabout} alt="Photo de montagne" />
+        <div className={`${styles.about} page-about`}>
+            <Banner image={imgabout} alt="Photo de montagne" customClass={styles.aboutBanner} />
 
             <div className={styles.collapseContainer}>
                 {aboutList.map((item, index) => (

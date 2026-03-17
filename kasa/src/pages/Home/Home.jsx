@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import imgbackground from "../../assets/imgbackground.png";
 import Banner from "../../components/Banner/Banner/";
 import { Card } from "../../components/Card/Card"
+import stylesBanner from "../../components/Banner/Banner.module.css";
 
 
 function Home() {
@@ -30,12 +31,16 @@ function Home() {
     }, []);
 
     return (
-        <div className={styles.home}>
+        <div className={`${styles.home} page-home`}>
 
             <Banner
                 image={imgbackground}
                 alt="Photo de falaises"
-                text={"Chez vous, \npartout et ailleurs"}
+                text={
+                    <>
+                        Chez vous,<span className={stylesBanner.breakMobile}> partout et ailleurs</span>
+                    </>
+                }
             />
 
             <div className={styles.cards}>

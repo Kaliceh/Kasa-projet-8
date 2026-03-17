@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 28px;
     color: white;
 }
 
@@ -33,29 +33,30 @@
     text-align: start;
 }
 
+.contentWrapper {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+
+
 .contentText {
     color: black;
     font-size: 18px;
-}
 
-.contentWrapper {
-    overflow: hidden;
-    width: 100%;
-
-    max-height: 0;
-    opacity: 0;
     transform: translateY(-20px);
+    opacity: 0;
 
-    transition:
-        max-height 0.4s ease,
-        opacity 0.3s ease,
-        transform 0.4s ease;
+    transition: transform 0.4s ease, opacity 0.3s ease;
 }
 
-/* 🔥 état ouvert */
+.contentWrapper.open .contentText {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .contentWrapper.open {
     max-height: 500px;
-    /* assez grand pour contenir le texte */
     opacity: 1;
     transform: translateY(0);
 }
@@ -135,6 +136,7 @@
     .content {
         font-size: 12px;
         width: 92%;
+        margin-left: 20px;
     }
 
     .contentText {
