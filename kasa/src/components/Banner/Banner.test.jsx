@@ -11,16 +11,16 @@ describe('Banner', () => {
         expect(screen.getByText('test')).toBeInTheDocument()
     });
 
-    it('renders correct image from pops ', () => {
-        render(<Banner image="test.png" />)
+    it('renders correct image from props', () => {
+        render(<Banner image="test.png" text="test" />)
 
-        expect(screen.getByTestId("banner-img")).toHaveStyle(`background-image: url(test.png)`);
-
-    });
+        expect(screen.getByLabelText('banner')).toHaveStyle('background-image: url(test.png)')
+    })
 
     it('does not render text when text props is not provided', () => {
         render(<Banner image="test.png" />)
 
         expect(screen.queryByRole("heading")).not.toBeInTheDocument()
     });
+
 });

@@ -11,14 +11,12 @@ function Collapse({ title, content, customClass, contentClass }) {
                 <div
                     className={styles.button}
                     onClick={() => setIsOpen(!isOpen)}
-                    data-testid="collapse-toggle"
                 >
                     <span className={styles.titlebutton}>{title}</span>
                     <img
                         src={vector}
                         alt="Chevron"
                         className={`${styles.vector} ${isOpen ? styles.open : ""}`}
-                        data-testid="collapse-chevron"
                     />
                 </div>
 
