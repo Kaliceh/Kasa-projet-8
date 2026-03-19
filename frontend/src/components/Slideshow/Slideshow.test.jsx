@@ -58,7 +58,6 @@ describe('Slideshow', () => {
         expect(screen.queryByAltText('Précédent')).not.toBeInTheDocument();
         expect(screen.queryByAltText('Suivant')).not.toBeInTheDocument();
 
-
         expect(screen.queryByText(/1\/1/)).not.toBeInTheDocument();
 
     });

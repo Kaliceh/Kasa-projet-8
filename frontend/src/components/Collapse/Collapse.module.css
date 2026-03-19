@@ -47,7 +47,7 @@
     color: black;
     font-size: 18px;
 
-    transform: translateY(-20px);
+    transform: translateY(-100px);
     opacity: 0;
 
     transition: transform 0.4s ease, opacity 0.3s ease;
