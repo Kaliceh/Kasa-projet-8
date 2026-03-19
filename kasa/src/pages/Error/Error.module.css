@@ -1,0 +1,54 @@
+.error {
+    color: #FF6060;
+    padding-bottom: 139px;
+}
+
+.error h1 {
+    font-size: 288px;
+    font-family: "Montserrat";
+    margin-top: 89px;
+    margin-bottom: 89px;
+}
+
+.error h2 {
+    font-size: 36px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    margin-bottom: 139px;
+}
+
+.linkReturn {
+    color: black;
+    font-size: 18px;
+    font-family: "Montserrat";
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 1px;
+    text-decoration-skip-ink: none;
+}
+
+.linkReturn:hover {
+    color: black;
+}
+
+@media (max-width: 480px) {
+    .error h1 {
+        font-size: 96px;
+        margin-top: 113px;
+        margin-bottom: 113px;
+    }
+
+    .error h2 {
+        font-size: 18px;
+        margin-bottom: 113px;
+    }
+
+    .linkReturn {
+        font-size: 14px;
+    }
+
+    .error {
+        padding-bottom: 113px;
+    }
+}

@@ -1,0 +1,14 @@
+.aboutContent {
+    margin-left: 130px;
+}
+
+
+.aboutBanner {
+    margin-bottom: 38px;
+}
+
+@media (max-width: 480px) {
+    .aboutBanner {
+        margin-bottom: 19px;
+    }
+}
