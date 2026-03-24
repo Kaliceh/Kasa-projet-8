@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { fireEvent, render, screen } from '@testing-library/react'
-import { Slideshow } from './Slideshow'
+import { Slideshow } from '../src/components/Slideshow/Slideshow'
 
 describe('Slideshow', () => {
 
