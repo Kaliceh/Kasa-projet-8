@@ -2,10 +2,12 @@ import { useState } from "react";
 import styles from "./Slideshow.module.css";
 import ArrowLeft from "../../assets/ArrowLeft.png";
 import ArrowRight from "../../assets/ArrowRight.png";
+import NoImage from "../../assets/noImage2.png"
 
 export function Slideshow(props) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const pictures = props.pictures || [];
 
     const nextSlide = () => {
         if (!props?.pictures) return;
@@ -21,15 +23,23 @@ export function Slideshow(props) {
         );
     };
 
-    const hasMultiplePictures = props.pictures.length > 1;
+    const hasMultiplePictures = pictures.length > 1;
 
     return (
 
         <div className={styles.carouselContainer}>
             <img
-                src={props.pictures[currentIndex]}
+                src={pictures.length > 0
+                    ? pictures[currentIndex]
+                    : NoImage
+                }
                 alt={`image ${currentIndex + 1}`}
                 className={styles.carouselImage}
+                onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = NoImage;
+                }
+                }
             />
 
             {hasMultiplePictures && (
