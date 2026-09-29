@@ -24,7 +24,7 @@ git clone https://github.com/Kaliceh/Kasa-projet-8.git
 2. Placez-vous dans le dossier du projet :
 
 ```bash
-cd Kasa_kasa
+cd projet_kasa
 ```
 
 3. Installez les dépendances :
